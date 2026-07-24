@@ -297,7 +297,7 @@
 </div>
             <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off" class="max-w-md mx-auto space-y-4">
                 <input type="hidden" name="access_key" value="efbfe6a4-a763-47e1-a2a1-af421a620468">
-                <input type="hidden" name="redirect" value="https://jackiegrandison.com?submitted=true">
+                <input type="hidden" name="redirect" value="https://jackiegrandison.com?submitted=true#contact">
                 <input type="hidden" name="subject" value="New Consultation Request from JackieGrandison.com">
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
@@ -338,9 +338,13 @@
         const banner = document.getElementById('success-banner');
         if (banner) {
             banner.classList.remove('hidden');
+            
+            // Smoothly scroll down so the thank-you banner is centered on screen
+            banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
-        // 2. Cleanly remove "?submitted=true" from the URL bar without reloading
-        window.history.replaceState({}, document.title, window.location.pathname);
+        
+        // 2. Cleanly remove "?submitted=true" from the URL bar while preserving the hash
+        window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
     }
 
     // 3. Force form reset on browser back navigation
