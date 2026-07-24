@@ -291,8 +291,9 @@
                 <a href="mailto:contact@jackiegrandison.com" class="text-goldAccent hover:underline">contact@jackiegrandison.com</a>
             </p>
            
-            <form action="https://api.web3forms.com/submit" method="POST" class="max-w-md mx-auto space-y-4">
+            <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off" class="max-w-md mx-auto space-y-4">
                 <input type="hidden" name="access_key" value="efbfe6a4-a763-47e1-a2a1-af421a620468">
+                <input type="hidden" name="redirect" value="https://jackiegrandison.com?submitted=true">
                 <input type="hidden" name="subject" value="New Consultation Request from JackieGrandison.com">
                 <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
@@ -324,8 +325,16 @@
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
+   <script>
+    lucide.createIcons();
+
+    // Force the contact form to reset whenever the page is loaded or restored from browser back-navigation
+    window.addEventListener('pageshow', function (event) {
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.reset();
+        }
+    });
+</script>
 </body>
 </html>
