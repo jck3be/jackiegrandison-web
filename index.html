@@ -291,6 +291,10 @@
                 <a href="mailto:contact@jackiegrandison.com" class="text-goldAccent hover:underline">contact@jackiegrandison.com</a>
             </p>
            
+            <div id="success-banner" class="hidden max-w-md mx-auto mb-6 p-4 bg-forest text-white rounded-xl text-sm font-medium flex items-center justify-center gap-2 border border-goldAccent/30 shadow-md">
+    <i data-lucide="check-circle" class="w-5 h-5 text-goldAccent shrink-0"></i>
+    <span>Thank you! Your request has been received. I will be in touch shortly.</span>
+</div>
             <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off" class="max-w-md mx-auto space-y-4">
                 <input type="hidden" name="access_key" value="efbfe6a4-a763-47e1-a2a1-af421a620468">
                 <input type="hidden" name="redirect" value="https://jackiegrandison.com?submitted=true">
@@ -325,10 +329,21 @@
         </div>
     </footer>
 
-   <script>
+  <script>
     lucide.createIcons();
 
-    // Force the contact form to reset whenever the page is loaded or restored from browser back-navigation
+    // 1. Check if the user was redirected after submitting the form
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('submitted') === 'true') {
+        const banner = document.getElementById('success-banner');
+        if (banner) {
+            banner.classList.remove('hidden');
+        }
+        // 2. Cleanly remove "?submitted=true" from the URL bar without reloading
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+    // 3. Force form reset on browser back navigation
     window.addEventListener('pageshow', function (event) {
         const contactForm = document.querySelector('form');
         if (contactForm) {
