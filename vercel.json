@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/vault",
+      "destination": "https://drive.google.com/file/d/1CM6rTAnxfY_Opqk6riWpDG0cUeCswdO4/view?usp=sharing",
+      "permanent": false
+    }
+  ]
+}

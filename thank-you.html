@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed | Jackie Grandison</title>
+    <link rel="icon" type="image/png" href="JGFavicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        creamBg: '#fbfaf7',     // Ultra-clean warm off-white
+                        forest: '#0f2922',      // Deep, authoritative forest green
+                        forestLight: '#1b3f35', // Lighter forest for hover states
+                        goldAccent: '#b89047',  // Refined warm brass/gold
+                        goldLight: '#f6f1e5',   // Very soft gold tint for cards
+                        charcoalText: '#1e201e' // Soft black for high-end readability
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-creamBg text-charcoalText font-sans selection:bg-goldAccent selection:text-white antialiased flex flex-col min-h-screen justify-between">
+
+    <header class="border-b border-gray-200/60 bg-white/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="inline-block">
+                <img src="JG2LOGO2.png" alt="Jackie Grandison Logo" class="w-32 h-auto">
+            </a>
+            <a href="index.html" class="text-sm font-semibold text-forest hover:text-goldAccent transition-colors">
+                &larr; Return to Main Site
+            </a>
+        </div>
+    </header>
+
+    <main class="max-w-2xl mx-auto text-center py-16 px-6 my-auto">
+        <div class="bg-white border border-gray-200/60 rounded-3xl p-8 md:p-12 shadow-sm">
+            
+            <div class="w-16 h-16 bg-goldLight text-goldAccent rounded-full flex items-center justify-center mx-auto mb-6">
+                <i data-lucide="check-circle" class="w-8 h-8"></i>
+            </div>
+            
+            <h1 class="text-3xl font-serif font-bold text-forest mb-4">
+                Thank You for Your Purchase!
+            </h1>
+            
+            <p class="text-gray-600 mb-8 text-sm md:text-base leading-relaxed">
+                Your payment has been successfully processed, and an official transaction receipt has been emailed to you by PayPal. Below is your direct access to the master frameworks.
+            </p>
+            
+            <a href="/vault" 
+   target="_blank" 
+   rel="noopener noreferrer" 
+   class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-goldAccent text-forest font-bold rounded-xl shadow-lg shadow-goldAccent/20 hover:bg-amber-100 transition-all text-base">
+   <i data-lucide="file-text" class="w-5 h-5"></i> Access The High-Stakes Vault (PDF)
+</a>
+
+            <p class="text-xs text-gray-400 mt-6">
+                Need support with your order? Contact <a href="mailto:contact@jackiegrandison.com" class="text-goldAccent hover:underline">contact@jackiegrandison.com</a>
+            </p>
+        </div>
+    </main>
+
+    <footer class="border-t border-gray-150 bg-white py-8 text-center text-xs text-gray-500">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 Jackie Grandison. All Rights Reserved.</p>
+            <p class="text-[10px] tracking-wider uppercase text-gray-400">Independent Advisory Framework</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
