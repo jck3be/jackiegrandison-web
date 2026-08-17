@@ -11,18 +11,19 @@
             theme: {
                 extend: {
                     colors: {
-                        creamBg: '#fbfaf7',
-                        forest: '#0f2922',
-                        forestLight: '#1b3f35',
-                        goldAccent: '#b89047',
-                        goldLight: '#f6f1e5',
-                        charcoalText: '#1e201e'
+                        creamBg: '#fbfaf7',     // Ultra-clean warm off-white
+                        forest: '#0f2922',      // Deep, authoritative forest green
+                        forestLight: '#1b3f35', // Lighter forest for hover states
+                        goldAccent: '#b89047',  // Refined warm brass/gold
+                        goldLight: '#f6f1e5',   // Very soft gold tint for cards
+                        charcoalText: '#1e201e' // Soft black for high-end readability
                     }
                 }
             }
         }
     </script>
     <script src="https://unpkg.com/lucide@latest"></script>
+   
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
@@ -49,6 +50,7 @@
                 <a href="#contact" class="hidden md:inline-flex px-5 py-2 bg-forest text-white rounded-lg text-sm font-semibold hover:bg-forestLight transition-all">
                     Work With Me
                 </a>
+                <!-- Hamburger — mobile only -->
                 <button id="menuBtn" class="md:hidden flex flex-col justify-center items-center w-9 h-9 rounded-lg border border-gray-200 bg-white gap-1.5" aria-label="Open menu">
                     <span class="block w-5 h-0.5 bg-forest transition-all"></span>
                     <span class="block w-5 h-0.5 bg-forest transition-all"></span>
@@ -56,16 +58,17 @@
                 </button>
             </div>
         </div>
+        <!-- Mobile nav dropdown -->
         <div id="mobileMenu" class="hidden md:hidden bg-creamBg border-t border-gray-200/60 px-6 py-4 flex flex-col gap-4 text-sm font-semibold text-forest/80">
             <a href="#about" class="hover:text-goldAccent transition-colors" onclick="closeMobileMenu()">About</a>
             <a href="#services" class="hover:text-goldAccent transition-colors" onclick="closeMobileMenu()">Services</a>
             <a href="#product" class="hover:text-goldAccent transition-colors" onclick="closeMobileMenu()">The Vault</a>
             <a href="#resources" class="hover:text-goldAccent transition-colors" onclick="closeMobileMenu()">Resources</a>
             <a href="#contact" class="hover:text-goldAccent transition-colors" onclick="closeMobileMenu()">Contact</a>
-            <a href="https://cal.com/jackiegrandison" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-5 py-2.5 bg-goldAccent text-forest rounded-lg text-sm font-semibold hover:bg-amber-400 transition-all text-center justify-center" onclick="closeMobileMenu()">
+            <a href="https://cal.com/jackiegrandison" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 px-5 py-2.5 bg-goldAccent text-forest rounded-lg text-sm font-semibold hover:bg-amber-400 transition-all text-center" onclick="closeMobileMenu()">
                 <i data-lucide="calendar" class="w-4 h-4"></i> Book a Call
             </a>
-            <a href="#contact" class="px-5 py-2.5 bg-forest text-white rounded-lg text-sm font-semibold hover:bg-forestLight transition-all text-center" onclick="closeMobileMenu()">
+            <a href="#contact" class="mt-2 px-5 py-2.5 bg-forest text-white rounded-lg text-sm font-semibold hover:bg-forestLight transition-all text-center" onclick="closeMobileMenu()">
                 Work With Me
             </a>
         </div>
@@ -121,50 +124,42 @@
                     <div class="space-y-3 text-sm text-gray-600">
                         <div class="flex items-start gap-2">
                             <i data-lucide="map-pin" class="w-4 h-4 text-goldAccent mt-0.5"></i>
-                            <span><strong>Based in Montgomery, AL</strong> — serving remote and on-site clients globally.</span>
+                            <span>Based in Montgomery, Alabama</span>
                         </div>
                         <div class="flex items-start gap-2">
-                            <i data-lucide="briefcase" class="w-4 h-4 text-goldAccent mt-0.5"></i>
-                            <span><strong>20+ years</strong> across government IT, healthcare (Cerner, Baptist Health), financial services, and enterprise operations.</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="code" class="w-4 h-4 text-goldAccent mt-0.5"></i>
-                            <span><strong>AI Developer</strong> — Subject Matter Expert contributing to LLM development and refinement since 2023.</span>
+                            <i data-lucide="server" class="w-4 h-4 text-goldAccent mt-0.5"></i>
+                            <span>Enterprise technology, government operations, and human systems</span>
                         </div>
                         <div class="flex items-start gap-2">
                             <i data-lucide="cpu" class="w-4 h-4 text-goldAccent mt-0.5"></i>
-                            <span><strong>Specialized in</strong> IT systems optimization, career strategy, and deploying AI-powered automation workflows.</span>
+                            <span>AI, infrastructure, systems strategy, and operational continuity</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="space-y-6">
-                <div class="bg-white p-6 rounded-2xl border border-gray-200/60 shadow-sm">
-                    <h3 class="text-lg font-bold text-forest mb-3">Strategic Expertise</h3>
-                    <p class="text-sm text-gray-600 leading-relaxed">
-                        Jackie bridges the gap between where systems are—whether IT infrastructure, organizational operations, or professional careers—and where they need to be. Her approach combines technical depth with strategic insight, deploying AI-augmented workflows that scale across teams.
+            <div class="bg-white border border-gray-200/60 rounded-3xl p-8 md:p-10 shadow-sm">
+                <div class="prose prose-sm max-w-none text-gray-600 leading-relaxed">
+                    <p class="mb-5 font-medium text-forest text-base">
+                        Jackie Grandison is a Senior IT Systems Technician, AI Subject Matter Expert, and entrepreneur with over 20 years of experience at the intersection of enterprise technology, government operations, and human systems. Based in Montgomery, Alabama, she brings a rare combination of hands-on technical depth and forward-thinking strategy to every environment she serves.
                     </p>
-                </div>
-                <div class="bg-goldLight border border-goldAccent/20 p-6 rounded-2xl">
-                    <h3 class="text-lg font-bold text-forest mb-4">Certifications</h3>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-goldAccent mt-0.5 flex-shrink-0"></i>
-                            <span class="text-gray-700">CompTIA Security+, Network+, Cloud Essentials+, Project+</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-goldAccent mt-0.5 flex-shrink-0"></i>
-                            <span class="text-gray-700">ISC² Certified in Cybersecurity (CC) — Official ISC2 Member</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-goldAccent mt-0.5 flex-shrink-0"></i>
-                            <span class="text-gray-700">ITIL Foundation | CCNA Bootcamp (Advanced Networking)</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="check-circle" class="w-4 h-4 text-goldAccent mt-0.5 flex-shrink-0"></i>
-                            <span class="text-gray-700">Degree in Computer Information Systems</span>
-                        </div>
-                    </div>
+                    <p class="mb-5">
+                        In her current role as a Senior IT Systems Technician, Jackie serves as the primary IT point of contact for mission-critical government operations — managing enterprise infrastructure, endpoint support, network connectivity, instructional and emerging technology systems, Active Directory administration, and cross-agency system support. Her work routinely extends beyond standard business hours, a testament to her operational reliability and unwavering commitment to continuity.
+                    </p>
+                    <p class="mb-5">
+                        Her professional journey began in the late 1990s and has traversed some of the most demanding technical and service environments in the region — from the U.S. Department of Education and Regions Financial Corporation, to Baptist Health's clinical systems environment, and ultimately to Alabama's state-level government infrastructure. She served as Lead Analyst for the Baptist Health Montgomery Cancer Center and played a key role in the Cerner FirstNet Go-Live at Baptist Medical Center East.
+                    </p>
+                   <p class="mb-5">
+    Jackie holds a degree in Computer Information Systems. Her certifications include CompTIA Security+, Network+, Cloud Essentials+, Project+, and ITIL Foundation, with advanced networking training completed through the CCNA Bootcamp. She is also an official member of ISC2, having earned the Certified in Cybersecurity (CC) credential — reflecting her continued investment in cybersecurity as a core discipline alongside her infrastructure and AI work.
+</p>
+                    <p class="mb-5">
+                        In 2023, Jackie expanded into the world of Artificial Intelligence, joining Outlier as a Subject Matter Expert, where she contributes to the development and refinement of Large Language Models. This role sits at the convergence of her two greatest professional passions: disciplined systems mastery and the deployment of emerging technology.
+                    </p>
+                    <p class="mb-5">
+                        A multi-award recipient recognized for Top Performance, Customer Service Excellence, Increased Initiative, and Conflict Resolution, Jackie does not collect accolades — she maintains a standard.
+                    </p>
+                    <p class="text-forest font-semibold border-l-4 border-goldAccent pl-5 italic mt-6">
+                        At the core of everything she does is one consistent commitment: bridging the gap between where systems are, and where they need to be — whether that system is an IT infrastructure, an organization, or a person.
+                    </p>
                 </div>
             </div>
         </div>
@@ -172,152 +167,149 @@
 
     <section id="services" class="max-w-6xl mx-auto px-6 py-24 border-b border-gray-100">
         <div class="text-center mb-16">
-            <span class="text-xs text-goldAccent font-bold uppercase tracking-widest">What I Offer</span>
-            <h2 class="text-3xl md:text-4xl font-serif font-semibold text-forest mt-3 mb-6 leading-tight">
-                Strategic Services
-            </h2>
-            <p class="text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
-                Executive-level advisory and turnkey technical solutions for individuals and organizations scaling operations through AI-augmented systems and strategic career optimization.
-            </p>
+            <h2 class="text-3xl md:text-4xl font-serif font-semibold text-forest mb-4">Strategic Advisory</h2>
+            <p class="text-gray-500 max-w-xl mx-auto text-sm">Targeted, high-touch execution to automate business systems or aggressively position yourself in the competitive technical landscape.</p>
         </div>
-
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white border border-gray-200/60 rounded-2xl p-8 shadow-sm hover:border-goldAccent/50 transition-all">
-                <div class="w-12 h-12 bg-goldLight text-goldAccent rounded-xl flex items-center justify-center mb-4">
-                    <i data-lucide="zap" class="w-6 h-6"></i>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-8 md:p-10 rounded-2xl border border-gray-200/60 shadow-sm flex flex-col justify-between hover:border-goldAccent/40 transition-all duration-300">
+                <div>
+                    <div class="w-12 h-12 bg-goldLight text-goldAccent rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="sliders" class="w-6 h-6"></i>
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-forest">AI Workflow Audit &amp; System Integration</h3>
+                        <span class="text-xl font-extrabold text-forest">$150</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Tailored directly to local micro-businesses, busy executives, and professionals. An intensive 2-hour strategic evaluation mapping your daily workflows, designing custom AI workspaces, and deploying direct automation scripts.
+                    </p>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8 border-t border-gray-100 pt-6">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-goldAccent"></i> High-risk bottleneck mapping</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-goldAccent"></i> Personalized workspace deployment</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-goldAccent"></i> 3 production-ready customized prompt routines</li>
+                    </ul>
                 </div>
-                <h3 class="text-lg font-bold text-forest mb-3">AI Workflow Audit &amp; System Integration</h3>
-                <p class="text-sm text-gray-600 mb-6 leading-relaxed">
-                    Full diagnostic of your operational systems — email, CRM, team collaboration, content production. Identify automation opportunities and deploy AI-powered infrastructure that scales without adding headcount.
-                </p>
-                <p class="text-sm font-semibold text-goldAccent">$150 / Consultation</p>
+                <a href="#contact" class="w-full py-3 bg-forest text-white text-center font-bold rounded-xl hover:bg-forestLight transition-all">
+                    Book Audit Session
+                </a>
             </div>
-
-            <div class="bg-white border border-gray-200/60 rounded-2xl p-8 shadow-sm hover:border-goldAccent/50 transition-all">
-                <div class="w-12 h-12 bg-goldLight text-goldAccent rounded-xl flex items-center justify-center mb-4">
-                    <i data-lucide="file-text" class="w-6 h-6"></i>
+            <div class="bg-white p-8 md:p-10 rounded-2xl border border-gray-200/60 shadow-sm flex flex-col justify-between hover:border-goldAccent/40 transition-all duration-300">
+                <div>
+                    <div class="w-12 h-12 bg-goldLight text-goldAccent rounded-xl flex items-center justify-center mb-6">
+                        <i data-lucide="fingerprint" class="w-6 h-6"></i>
+                    </div>
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-forest">High-End Tech Resume &amp; Bio Makeover</h3>
+                        <span class="text-xl font-extrabold text-forest">$150</span>
+                    </div>
+                    <p class="text-gray-600 mb-6 text-sm leading-relaxed">
+                        Fusing technical authority (IT Systems) with elite ghostwriting precision. I reconstruct your technical resume and credentials to navigate algorithmic ATS filters and command authority with hiring panels.
+                    </p>
+                    <ul class="space-y-3 text-sm text-gray-600 mb-8 border-t border-gray-100 pt-6">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-goldAccent"></i> Specialized keyword integration</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-goldAccent"></i> Complete resume and narrative design</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-goldAccent"></i> Professional LinkedIn optimization profile</li>
+                    </ul>
                 </div>
-                <h3 class="text-lg font-bold text-forest mb-3">Tech Resume &amp; Bio Makeover</h3>
-                <p class="text-sm text-gray-600 mb-6 leading-relaxed">
-                    Strategic rewrite of your professional narrative. Position yourself for executive roles, C-suite transitions, or specialized technical opportunities. Audit includes LinkedIn, resume, and personal brand positioning.
-                </p>
-                <p class="text-sm font-semibold text-goldAccent">$150 / Deep Audit</p>
-            </div>
-
-            <div class="bg-white border border-gray-200/60 rounded-2xl p-8 shadow-sm hover:border-goldAccent/50 transition-all">
-                <div class="w-12 h-12 bg-goldLight text-goldAccent rounded-xl flex items-center justify-center mb-4">
-                    <i data-lucide="key-round" class="w-6 h-6"></i>
-                </div>
-                <h3 class="text-lg font-bold text-forest mb-3">The High-Stakes Letter Vault</h3>
-                <p class="text-sm text-gray-600 mb-6 leading-relaxed">
-                    Framework-driven templates for dispute resolution without attorneys. Professionally crafted, legally sound advocacy letters and escalation scripts. Two tiers: Consumer Advocacy and Business Disputes.
-                </p>
-                <p class="text-sm font-semibold text-goldAccent">$25–$75 / Instant Access</p>
+                <a href="#contact" class="w-full py-3 bg-forest text-white text-center font-bold rounded-xl hover:bg-forestLight transition-all">
+                    Secure Your Placement
+                </a>
             </div>
         </div>
     </section>
 
     <section id="product" class="max-w-6xl mx-auto px-6 py-24 border-b border-gray-100">
-        <div class="text-center mb-16">
+        <!-- Section header -->
+        <div class="text-center mb-12">
             <span class="text-xs text-goldAccent font-bold uppercase tracking-widest">Digital Products</span>
-            <h2 class="text-3xl md:text-4xl font-serif font-semibold text-forest mt-3 mb-6 leading-tight">
-                The High-Stakes Letter &amp; Advocacy Prompt Vault
-            </h2>
-            <p class="text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
-                Framework-driven templates for resolving disputes without attorneys. Deploy professional advocacy letters, negotiation scripts, and persuasive communication systems. Legally sound. Immediately actionable.
+            <h2 class="text-3xl md:text-4xl font-serif font-semibold text-forest mt-3 mb-4">The High-Stakes Letter &amp; Advocacy Prompt Vault</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto text-sm leading-relaxed">
+                Stop drafting fragile communications. Years of critical, highly successful advocacy experience — handling landlord disputes, debt negotiations, insurance denials, vendor failures, and contract breaches — engineered into seven precise, advanced prompting frameworks. Works with any AI tool you already use.
             </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white border border-gray-200/60 rounded-3xl p-8 shadow-sm hover:border-goldAccent/50 transition-all flex flex-col justify-between">
+        <!-- Dual-tier product cards -->
+        <div class="grid md:grid-cols-2 gap-8 mb-10">
+
+            <!-- Consumer Advocacy Bundle — $25 -->
+            <div class="bg-forest rounded-2xl p-8 text-white flex flex-col justify-between">
                 <div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-goldLight text-goldAccent rounded-full text-xs font-bold uppercase tracking-wider mb-4">
-                        <i data-lucide="user" class="w-3.5 h-3.5"></i> Consumer
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full text-xs font-semibold text-goldAccent mb-4">
+                        <i data-lucide="shield" class="w-3.5 h-3.5"></i> Consumer Tier
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-forest mb-2">Consumer Advocacy Bundle</h3>
-                    <p class="text-goldAccent font-bold text-3xl mb-1">$25</p>
-                    <p class="text-gray-500 text-xs mb-6">Frameworks 1–4</p>
-                    <div class="space-y-3 mb-8">
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="check" class="w-5 h-5 text-goldAccent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-sm text-gray-700"><strong>Landlord Disputes:</strong> Late Rent Deductions &amp; Repair Obligations</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="check" class="w-5 h-5 text-goldAccent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-sm text-gray-700"><strong>Debt Collection Defense:</strong> FDCPA Violation Notices</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="check" class="w-5 h-5 text-goldAccent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-sm text-gray-700"><strong>Financial Disputes:</strong> Administrative Fee Challenges</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="check" class="w-5 h-5 text-goldAccent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-sm text-gray-700"><strong>Insurance Claims:</strong> Denial Appeals &amp; Escalations</span>
-                        </div>
-                    </div>
+                    <h3 class="text-xl font-bold text-white mb-2">Consumer Advocacy Bundle</h3>
+                    <p class="text-gray-300 text-xs leading-relaxed mb-5">Four frameworks engineered for individual consumer disputes — from landlord conflicts and debt collection to insurance denials and corporate fee disputes.</p>
+                    <ul class="space-y-2 text-xs text-gray-200 mb-6">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-goldAccent"></i> Framework 1 — Landlord &amp; Lease Dispute</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-goldAccent"></i> Framework 2 — FDCPA Debt Collection Defense</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-goldAccent"></i> Framework 3 — Administrative &amp; Fee Dispute</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-goldAccent"></i> Framework 4 — Insurance Claim Denial Appeal</li>
+                    </ul>
+                    <div class="text-xs text-goldAccent font-semibold mb-6">+ Consumer Quick-Start Guide included</div>
                 </div>
-                <a href="https://www.paypal.com/ncp/payment/ZEUZHE4NJD98Y" class="w-full py-3.5 bg-forest text-white font-bold rounded-xl hover:bg-forestLight transition-all text-center">
-                    Purchase Access
-                </a>
+                <div>
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-3xl font-extrabold">$25</span>
+                        <span class="text-xs text-gray-300">one-time purchase</span>
+                    </div>
+                    <a href="https://www.paypal.com/ncp/payment/ZEUZHE4NJD98Y" target="_blank" rel="noopener noreferrer"
+                       class="block w-full py-3 bg-goldAccent text-forest text-center font-bold rounded-xl hover:bg-amber-400 transition-all text-sm">
+                        Purchase Consumer Bundle
+                    </a>
+                </div>
             </div>
 
-            <div class="bg-white border border-goldAccent/50 rounded-3xl p-8 shadow-md hover:shadow-lg transition-all flex flex-col justify-between relative">
-                <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 bg-goldAccent text-forest text-xs font-bold uppercase tracking-wider rounded-full">
-                    Most Popular
+            <!-- Business Dispute Suite — $75 -->
+            <div class="bg-white border-2 border-forest rounded-2xl p-8 flex flex-col justify-between">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-goldLight rounded-full text-xs font-semibold text-forest mb-4">
+                        <i data-lucide="briefcase" class="w-3.5 h-3.5 text-goldAccent"></i> Business Tier
+                    </div>
+                    <h3 class="text-xl font-bold text-forest mb-2">Business Dispute Suite</h3>
+                    <p class="text-gray-600 text-xs leading-relaxed mb-5">Three frameworks built for landlords, business owners, freelancers, and contractors handling high-stakes financial disputes and pre-legal demands.</p>
+                    <ul class="space-y-2 text-xs text-gray-600 mb-6">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-goldAccent"></i> Framework 5 — Landlord Rent Recovery &amp; Pre-Eviction</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-goldAccent"></i> Framework 6 — Vendor Non-Performance &amp; Refund</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-goldAccent"></i> Framework 7 — Contractual Breach &amp; Unpaid Invoice</li>
+                    </ul>
+                    <div class="text-xs text-goldAccent font-semibold mb-6">+ Business Quick-Start Guide included</div>
                 </div>
                 <div>
-                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-goldLight text-goldAccent rounded-full text-xs font-bold uppercase tracking-wider mb-4">
-                        <i data-lucide="briefcase" class="w-3.5 h-3.5"></i> Business
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-3xl font-extrabold text-forest">$75</span>
+                        <span class="text-xs text-gray-400">one-time purchase</span>
                     </div>
-                    <h3 class="text-2xl font-serif font-bold text-forest mb-2">Business Dispute Suite</h3>
-                    <p class="text-goldAccent font-bold text-3xl mb-1">$75</p>
-                    <p class="text-gray-500 text-xs mb-6">Frameworks 5–7</p>
-                    <div class="space-y-3 mb-8">
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="check" class="w-5 h-5 text-goldAccent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-sm text-gray-700"><strong>Commercial Landlord Recovery:</strong> Rent &amp; Damages Claims</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="check" class="w-5 h-5 text-goldAccent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-sm text-gray-700"><strong>Vendor Non-Performance:</strong> Service Breach Notices</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="check" class="w-5 h-5 text-goldAccent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-sm text-gray-700"><strong>Unpaid Invoices:</strong> Escalation &amp; Demand Letters</span>
-                        </div>
-                        <div class="flex items-start gap-2">
-                            <i data-lucide="check" class="w-5 h-5 text-goldAccent flex-shrink-0 mt-0.5"></i>
-                            <span class="text-sm text-gray-700"><strong>Advanced Bundle:</strong> All Consumer Frameworks (1–4) Included</span>
-                        </div>
-                    </div>
+                    <a href="https://www.paypal.com/ncp/payment/BR9FZT73CYDFC" target="_blank" rel="noopener noreferrer"
+                       class="block w-full py-3 bg-forest text-white text-center font-bold rounded-xl hover:bg-forestLight transition-all text-sm">
+                        Purchase Business Suite
+                    </a>
                 </div>
-                <a href="https://www.paypal.com/ncp/payment/BR9FZT73CYDFC" class="w-full py-3.5 bg-forest text-white font-bold rounded-xl hover:bg-forestLight transition-all text-center">
-                    Purchase Access
-                </a>
             </div>
         </div>
 
-        <div class="mt-12 bg-goldLight border border-goldAccent/20 rounded-2xl p-8 text-center">
-            <h3 class="text-lg font-semibold text-forest mb-2">Questions Before You Buy?</h3>
-            <p class="text-gray-600 text-sm mb-4">Each framework includes step-by-step execution roadmaps, email templates, and escalation strategies—all legally sound and deployment-ready.</p>
-            <a href="#contact" class="inline-flex items-center gap-2 text-forest font-semibold hover:text-goldAccent transition-colors text-sm">
-                Start with a Free Strategy Call <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        <!-- Free Preview download -->
+        <div class="text-center mt-6 mb-2">
+            <a href="/vault/Free_Preview_Advocacy_Vault.pdf"
+               class="inline-flex items-center gap-2 px-6 py-3 bg-goldLight text-forest font-semibold rounded-xl border border-goldAccent/30 hover:bg-amber-100 transition-all text-sm">
+                <i data-lucide="gift" class="w-4 h-4 text-goldAccent"></i>
+                Download Free Preview — See All 7 Frameworks Before You Buy
+                <i data-lucide="download" class="w-4 h-4 text-goldAccent"></i>
             </a>
         </div>
+
+        <!-- Tool-agnostic note -->
+        <p class="text-center text-xs text-gray-400 mt-4">
+            All frameworks are tool-agnostic — works with Claude, ChatGPT, Google Gemini, Grok, DeepSeek, or any AI chat model you already use. No new account required.
+        </p>
     </section>
 
     <section id="resources" class="max-w-6xl mx-auto px-6 py-24 border-b border-gray-100">
         <div class="text-center mb-16">
-            <span class="text-xs text-goldAccent font-bold uppercase tracking-widest">Learn &amp; Explore</span>
-            <h2 class="text-3xl md:text-4xl font-serif font-semibold text-forest mt-3 mb-6 leading-tight">
-                Free Expert Resources
-            </h2>
-            <p class="text-gray-600 max-w-2xl mx-auto text-base leading-relaxed">
-                Access premium training materials, labs, and course content—all curated and offered free to build your technical foundation.
-            </p>
+            <span class="text-xs text-goldAccent font-bold uppercase tracking-widest">Accelerate Your Technical Career</span>
+            <h2 class="text-3xl md:text-4xl font-serif font-semibold text-forest mt-2 mb-4">Free Expert Resources</h2>
+            <p class="text-gray-500 max-w-xl mx-auto text-sm">Industry-standard engineering resources and hands-on lab guides I recommend to build real-world systems experience.</p>
         </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div class="bg-white p-6 rounded-2xl border border-gray-200/60 shadow-sm hover:border-goldAccent/30 transition-all flex flex-col justify-between">
                 <div>
                     <span class="text-xs text-goldAccent font-semibold tracking-wider uppercase">Cisco Networking</span>
@@ -361,11 +353,11 @@
                 Prefer email? Contact me directly at
                 <a href="mailto:contact@jackiegrandison.com" class="text-goldAccent hover:underline">contact@jackiegrandison.com</a>
             </p>
-
+           
             <div id="success-banner" class="hidden max-w-md mx-auto mb-6 p-4 bg-forest text-white rounded-xl text-sm font-medium flex items-center justify-center gap-2 border border-goldAccent/30 shadow-md">
-                <i data-lucide="check-circle" class="w-5 h-5 text-goldAccent shrink-0"></i>
-                <span>Thank you! Your request has been received. I will be in touch shortly.</span>
-            </div>
+    <i data-lucide="check-circle" class="w-5 h-5 text-goldAccent shrink-0"></i>
+    <span>Thank you! Your request has been received. I will be in touch shortly.</span>
+</div>
             <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off" class="max-w-md mx-auto space-y-4">
                 <input type="hidden" name="access_key" value="efbfe6a4-a763-47e1-a2a1-af421a620468">
                 <input type="hidden" name="redirect" value="https://jackiegrandison.com?submitted=true#contact">
@@ -401,34 +393,41 @@
         </div>
     </footer>
 
-    <script>
-        lucide.createIcons();
+  <script>
+    lucide.createIcons();
 
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        function closeMobileMenu() {
-            mobileMenu.classList.add('hidden');
+    // Mobile hamburger menu
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+    function closeMobileMenu() {
+        mobileMenu.classList.add('hidden');
+    }
+
+    // 1. Check if the user was redirected after submitting the form
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('submitted') === 'true') {
+        const banner = document.getElementById('success-banner');
+        if (banner) {
+            banner.classList.remove('hidden');
+            
+            // Smoothly scroll down so the thank-you banner is centered on screen
+            banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
+        
+        // 2. Cleanly remove "?submitted=true" from the URL bar while preserving the hash
+        window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+    }
 
-        const urlParams = new URLSearchParams(window.location.search);
-        if (urlParams.get('submitted') === 'true') {
-            const banner = document.getElementById('success-banner');
-            if (banner) {
-                banner.classList.remove('hidden');
-                banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }
-            window.history.replaceState({}, document.title, window.location.pathname + window.location.hash);
+    // 3. Force form reset on browser back navigation
+    window.addEventListener('pageshow', function (event) {
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.reset();
         }
-
-        window.addEventListener('pageshow', function (event) {
-            const contactForm = document.querySelector('form');
-            if (contactForm) {
-                contactForm.reset();
-            }
-        });
-    </script>
+    });
+</script>
 </body>
 </html>
